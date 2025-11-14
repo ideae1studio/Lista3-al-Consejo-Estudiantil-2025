@@ -1,0 +1,410 @@
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #c00000;
+  --gray: #cccccc;
+  --light-gray: #555555;
+  --card-bg: #0a0a0a;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--accent);
+}
+
+.logo-placeholder {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+nav a {
+  color: var(--gray);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO (PÁGINA DE INICIO) ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  padding: 2rem 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.hero-center {
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInScale 1.2s ease-out forwards;
+}
+
+/* --- NÚMERO 3 ESTILIZADO --- */
+.number-three-container {
+  display: flex;
+  justify-content: center;
+}
+
+.number-three {
+  font-size: 8.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: 
+    0 0 12px rgba(192, 0, 0, 0.5),
+    0 0 22px rgba(192, 0, 0, 0.7),
+    0 0 32px rgba(192, 0, 0, 0.5);
+  animation: pulseGlow 2s infinite alternate;
+  line-height: 1;
+  margin: 0;
+}
+
+/* --- LOGO PERSONALIZADO (opcional) --- */
+.logo-lista {
+  width: 240px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(192, 0, 0, 0.4));
+  animation: fadeInScale 1.2s ease-out forwards;
+}
+
+/* --- MASCOTAS EN PÁGINA DE INICIO --- */
+.hero-mascots {
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeInSlideUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.mascot {
+  width: 120px;
+  height: 120px;
+  opacity: 0.94;
+  filter: grayscale(100%) brightness(1.15);
+  transition: var(--transition);
+  border-radius: 8px;
+}
+
+.mascot:hover {
+  filter: grayscale(0%) brightness(1.3);
+  transform: scale(1.08);
+}
+
+.garu-hero {
+  animation: floatLeft 4.2s ease-in-out infinite;
+}
+
+.pucca-hero {
+  animation: floatRight 4.4s ease-in-out infinite;
+}
+
+/* --- TEXTO PRINCIPAL --- */
+.hero-content {
+  max-width: 800px;
+  opacity: 0;
+  animation: fadeInSlideUp 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.animated-title {
+  font-size: 2.7rem;
+  line-height: 1.3;
+  color: var(--accent);
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1.2rem;
+}
+
+.slogan {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  margin: 0.8rem 0;
+}
+
+.motto {
+  font-size: 1.15rem;
+  color: var(--gray);
+  font-weight: 300;
+}
+
+/* ===== OTRAS SECCIONES (MASCOTS DECORATIVAS) ===== */
+.page-mascots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.mascot-deco {
+  opacity: 0.18;
+  filter: grayscale(100%) brightness(1.1);
+  width: 70px;
+  height: 70px;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.pucca-deco { animation-name: floatRandom1; }
+.garu-deco { animation-name: floatRandom2; }
+.cat-deco { animation-name: floatRandom3; }
+
+/* ===== CANDIDATOS, TABLAS, FORMS, ETC. (sin cambios visuales) ===== */
+section {
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-items: center;
+}
+
+.candidate-card {
+  background: var(--card-bg);
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  padding: 1.8rem 1.2rem;
+  text-align: center;
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease-out;
+  max-width: 300px;
+}
+
+.candidate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(192, 0, 0, 0.35);
+  border-color: var(--accent);
+}
+
+.candidate-photo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.role {
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
+}
+
+.plan-table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.plan-table th,
+.plan-table td {
+  padding: 0.9rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.plan-table th {
+  color: var(--accent);
+  background-color: rgba(192, 0, 0, 0.05);
+}
+
+form {
+  max-width: 650px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--light-gray);
+  color: var(--text);
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: var(--transition);
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  opacity: 0.92;
+  transform: scale(1.04);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--light-gray);
+  margin-top: 2rem;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatRight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatRandom1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-12px) rotate(2deg); }
+  75% { transform: translateY(-6px) rotate(-2deg); }
+}
+
+@keyframes floatRandom2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  30% { transform: translateY(-10px) rotate(-3deg); }
+  80% { transform: translateY(-8px) rotate(3deg); }
+}
+
+@keyframes floatRandom3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  40% { transform: translateY(-15px) rotate(5deg); }
+  60% { transform: translateY(-5px) rotate(-5deg); }
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow: 
+      0 0 10px rgba(192, 0, 0, 0.4),
+      0 0 20px rgba(192, 0, 0, 0.6);
+  }
+  to {
+    text-shadow: 
+      0 0 15px rgba(192, 0, 0, 0.7),
+      0 0 25px rgba(192, 0, 0, 0.9),
+      0 0 35px rgba(192, 0, 0, 0.6);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  nav a { margin: 0.4rem 0.8rem; }
+  .number-three { font-size: 6rem; }
+  .hero-mascots { gap: 1.5rem; }
+  .mascot { width: 90px; height: 90px; }
+  .animated-title { font-size: 2.2rem; }
+  .slogan { font-size: 1.5rem; }
+  .mascot-deco { width: 55px; height: 55px; opacity: 0.15; }
+}
+
+@media (max-width: 480px) {
+  .number-three { font-size: 5rem; }
+  .hero-mascots { flex-direction: column; gap: 1.2rem; }
+  .animated-title { font-size: 2rem; }
+}

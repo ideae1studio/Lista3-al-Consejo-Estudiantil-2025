@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Juan Martín Portero Calle",
+    "role": "PRESIDENTE",
+    "average": "9.69",
+    "achievements": [
+      "Primer Brigadier",
+      "Primer Escolta del Pabellón de la Ciudad",
+      "Ganador Concurso de Oratoria",
+      "Ganador Singing Contest",
+      "Integrante de la Selección de Básquet de la Institución",
+      "Abanderado Nacional de la Escolta de la Institución"
+    ],
+    "photo": "assets/img/avatars/president.jpg"
+  },
+  {
+    "name": "Damaris Stefanía Peñafiel Farfán",
+    "role": "VICEPRESIDENTE",
+    "average": "9.48",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/vice.jpg"
+  },
+  {
+    "name": "Juan Sebastián Narváez Abril",
+    "role": "JEFE DE CAMPAÑA",
+    "average": "",
+    "achievements": ["Seleccionado de Fútbol"],
+    "photo": "assets/img/avatars/jefe_campana.jpg"
+  },
+  {
+    "name": "Wilson Bravo Ávila",
+    "role": "ASESOR DE IMAGEN",
+    "average": "",
+    "achievements": ["Seleccionado de Fútbol"],
+    "photo": "assets/img/avatars/asesor.jpg"
+  },
+  {
+    "name": "Diana Micaela Herrera Castillo",
+    "role": "SECRETARIA",
+    "average": "9.57",
+    "achievements": ["Brigadier"],
+    "photo": "assets/img/avatars/secretaria.jpg"
+  },
+  {
+    "name": "Andersson Aarón Nieto Ávila",
+    "role": "TESORERO",
+    "average": "9.96",
+    "achievements": [
+      "Brigadier Mayor",
+      "Abanderado del Pabellón de la Ciudad"
+    ],
+    "photo": "assets/img/avatars/tesorero.jpg"
+  },
+  {
+    "name": "Scarlett Valeria Mallaguari Caguana",
+    "role": "1° VOCAL PRINCIPAL",
+    "average": "8.32",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/vocal1.jpg"
+  },
+  {
+    "name": "Francisco Daniel Rivas Quito",
+    "role": "2° VOCAL PRINCIPAL",
+    "average": "8.61",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/vocal2.jpg"
+  },
+  {
+    "name": "Noelia Rafaela Gavilanes Cevallos",
+    "role": "3° VOCAL PRINCIPAL",
+    "average": "9.86",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/vocal3.jpg"
+  },
+  {
+    "name": "Matías Josué Jaramillo Tapia",
+    "role": "1° VOCAL SUPLENTE",
+    "average": "9.36",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/suplente1.jpg"
+  },
+  {
+    "name": "Paulett Camila Yange Flores",
+    "role": "2° VOCAL SUPLENTE",
+    "average": "9.70",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/suplente2.jpg"
+  },
+  {
+    "name": "Shellmy Maite Veloz Salvatierra",
+    "role": "3° VOCAL SUPLENTE",
+    "average": "9.56",
+    "achievements": ["Comandante de curso"],
+    "photo": "assets/img/avatars/suplente3.jpg"
+  }
+]
