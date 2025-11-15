@@ -178,35 +178,55 @@ nav a:hover::after {
   font-weight: 300;
 }
 
-/* ===== OTRAS SECCIONES (MASCOTS DECORATIVAS) ===== */
-.page-mascots {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
+/* ===== MASCOTAS DECORATIVAS SOBRE EL TÍTULO ===== */
+.section-mascots {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
+  justify-content: center;
+  gap: 1.8rem;
+  margin: 1.5rem auto 2rem;
+  max-width: 500px;
+  opacity: 0.95;
 }
 
-.mascot-deco {
-  opacity: 0.18;
-  filter: grayscale(100%) brightness(1.1);
-  width: 70px;
-  height: 70px;
-  animation-duration: 6s;
+.section-mascot {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  /* ¡SIN FILTRO DE BLANCO Y NEGRO! */
+  /* filter: grayscale(100%); ← ELIMINADO */
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
-.pucca-deco { animation-name: floatRandom1; }
-.garu-deco { animation-name: floatRandom2; }
-.cat-deco { animation-name: floatRandom3; }
+.section-mascot.pucca-m { animation-name: floatRandom1; }
+.section-mascot.garu-m { animation-name: floatRandom2; }
+.section-mascot.cat-m { animation-name: floatRandom3; }
+
+/* Animaciones suaves */
+@keyframes floatRandom1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes floatRandom2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes floatRandom3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-mascots {
+    gap: 1.2rem;
+  }
+  .section-mascot {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 /* ===== CANDIDATOS, TABLAS, FORMS, ETC. (sin cambios visuales) ===== */
 section {
