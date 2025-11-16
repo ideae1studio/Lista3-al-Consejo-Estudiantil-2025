@@ -17,7 +17,11 @@
     "name": "Damaris Stefanía Peñafiel Farfán",
     "role": "VICEPRESIDENTE",
     "average": "9.48",
-    "achievements": ["Comandante de curso"],
+    "achievements": [
+      "Activa participante en clubes de lectura" ,
+      "Seleccionada de la Institución de Gimnasia y Danza",
+      "Asiste a clases de steam (ciencia, tecnología, ingeniería y arte)"
+    ],
     "photo": "assets/img/avatars/vice.jpg"
   },
   {
@@ -47,7 +51,17 @@
     "average": "9.96",
     "achievements": [
       "Brigadier Mayor",
-      "Abanderado del Pabellón de la Ciudad"
+      "Abanderado del Pabellón de la Ciudad",
+      "Título de exelencia académica", 
+      "Banderín",
+      "Comandante 4 años",
+      "1 antigüedad 3 años seguidos",
+      "Represente a Calderón en el teatro",
+      "Ganador del concurso de dibujo",
+      "Concurso de poemas",
+      "Concurso de programación y edición",
+      "Concurso de conocimiento general",
+      "Concurso de cálculo rápido"
     ],
     "photo": "assets/img/avatars/tesorero.jpg"
   },
