@@ -111,12 +111,11 @@ nav a:hover::after {
 /* --- LOGO PERSONALIZADO (opcional) --- */
 .logo-lista {
   width: 100%;
-  max-width: 765px;
+  max-width: 765px; /* No superará los 765px en escritorio */
   height: auto;
   filter: drop-shadow(0 0 10px rgba(192, 0, 0, 0.4));
   animation: fadeInScale 1.2s ease-out forwards;
-  margin: 0 auto;
-  display: block;
+  margin: 0 auto; /* Centra el logo */
 }
 
 /* --- MASCOTAS EN PÁGINA DE INICIO --- */
